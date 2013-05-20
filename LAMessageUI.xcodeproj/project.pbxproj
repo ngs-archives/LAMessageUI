@@ -6,14 +6,222 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		853518AB1749D10100F589EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518AA1749D10100F589EE /* UIKit.framework */; };
+		853518AD1749D10100F589EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518AC1749D10100F589EE /* Foundation.framework */; };
+		853518AF1749D10100F589EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518AE1749D10100F589EE /* CoreGraphics.framework */; };
+		853518C91749D10200F589EE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518C81749D10100F589EE /* SenTestingKit.framework */; };
+		853518CA1749D10200F589EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518AA1749D10100F589EE /* UIKit.framework */; };
+		853518CB1749D10200F589EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853518AC1749D10100F589EE /* Foundation.framework */; };
+		853518D31749D10200F589EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 853518D11749D10200F589EE /* InfoPlist.strings */; };
+		853518D61749D10200F589EE /* LAMessageUIDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518D51749D10200F589EE /* LAMessageUIDemoTests.m */; };
+		853518E41749D12C00F589EE /* LAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518DE1749D12C00F589EE /* LAMAppDelegate.m */; };
+		853518E51749D12C00F589EE /* LAMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518E01749D12C00F589EE /* LAMDemoViewController.m */; };
+		853518E61749D12C00F589EE /* LAMessageUIDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853518E11749D12C00F589EE /* LAMessageUIDemo-Info.plist */; };
+		853518E71749D12C00F589EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518E31749D12C00F589EE /* main.m */; };
+		853518EE1749D15200F589EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853518E81749D15200F589EE /* Default-568h@2x.png */; };
+		853518EF1749D15200F589EE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 853518E91749D15200F589EE /* Default.png */; };
+		853518F01749D15200F589EE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853518EA1749D15200F589EE /* Default@2x.png */; };
+		853518F11749D15200F589EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 853518EC1749D15200F589EE /* InfoPlist.strings */; };
+		853518FA1749D17D00F589EE /* LAMessageComposeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518F41749D17D00F589EE /* LAMessageComposeRootViewController.m */; };
+		853518FB1749D17D00F589EE /* LAMessageComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853518F61749D17D00F589EE /* LAMessageComposeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		853518CC1749D10200F589EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B70C511746D4AF00981DB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 853518A61749D10100F589EE;
+			remoteInfo = LAMessageUIDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		853518A71749D10100F589EE /* LAMessageUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAMessageUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		853518AA1749D10100F589EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		853518AC1749D10100F589EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		853518AE1749D10100F589EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		853518C71749D10100F589EE /* LAMessageUIDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LAMessageUIDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		853518C81749D10100F589EE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		853518D01749D10200F589EE /* LAMessageUIDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LAMessageUIDemoTests-Info.plist"; sourceTree = "<group>"; };
+		853518D21749D10200F589EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		853518D41749D10200F589EE /* LAMessageUIDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAMessageUIDemoTests.h; sourceTree = "<group>"; };
+		853518D51749D10200F589EE /* LAMessageUIDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAMessageUIDemoTests.m; sourceTree = "<group>"; };
+		853518DD1749D12C00F589EE /* LAMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMAppDelegate.h; sourceTree = "<group>"; };
+		853518DE1749D12C00F589EE /* LAMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMAppDelegate.m; sourceTree = "<group>"; };
+		853518DF1749D12C00F589EE /* LAMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMDemoViewController.h; sourceTree = "<group>"; };
+		853518E01749D12C00F589EE /* LAMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMDemoViewController.m; sourceTree = "<group>"; };
+		853518E11749D12C00F589EE /* LAMessageUIDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LAMessageUIDemo-Info.plist"; sourceTree = "<group>"; };
+		853518E21749D12C00F589EE /* LAMessageUIDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LAMessageUIDemo-Prefix.pch"; sourceTree = "<group>"; };
+		853518E31749D12C00F589EE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		853518E81749D15200F589EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		853518E91749D15200F589EE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		853518EA1749D15200F589EE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		853518ED1749D15200F589EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		853518F31749D17D00F589EE /* LAMessageComposeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageComposeRootViewController.h; sourceTree = "<group>"; };
+		853518F41749D17D00F589EE /* LAMessageComposeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMessageComposeRootViewController.m; sourceTree = "<group>"; };
+		853518F51749D17D00F589EE /* LAMessageComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageComposeViewController.h; sourceTree = "<group>"; };
+		853518F61749D17D00F589EE /* LAMessageComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMessageComposeViewController.m; sourceTree = "<group>"; };
+		853518F71749D17D00F589EE /* LAMessageComposeViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageComposeViewControllerDelegate.h; sourceTree = "<group>"; };
+		853518F81749D17D00F589EE /* LAMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageItem.h; sourceTree = "<group>"; };
+		853518F91749D17D00F589EE /* LAMessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageUI.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		853518A41749D10100F589EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518AB1749D10100F589EE /* UIKit.framework in Frameworks */,
+				853518AD1749D10100F589EE /* Foundation.framework in Frameworks */,
+				853518AF1749D10100F589EE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853518C31749D10100F589EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518C91749D10200F589EE /* SenTestingKit.framework in Frameworks */,
+				853518CA1749D10200F589EE /* UIKit.framework in Frameworks */,
+				853518CB1749D10200F589EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		853518A81749D10100F589EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				853518A71749D10100F589EE /* LAMessageUIDemo.app */,
+				853518C71749D10100F589EE /* LAMessageUIDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		853518A91749D10100F589EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				853518AA1749D10100F589EE /* UIKit.framework */,
+				853518AC1749D10100F589EE /* Foundation.framework */,
+				853518AE1749D10100F589EE /* CoreGraphics.framework */,
+				853518C81749D10100F589EE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		853518B01749D10100F589EE /* LAMessageUIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				853518DD1749D12C00F589EE /* LAMAppDelegate.h */,
+				853518DE1749D12C00F589EE /* LAMAppDelegate.m */,
+				853518DF1749D12C00F589EE /* LAMDemoViewController.h */,
+				853518E01749D12C00F589EE /* LAMDemoViewController.m */,
+				853518B11749D10100F589EE /* Supporting Files */,
+			);
+			path = LAMessageUIDemo;
+			sourceTree = "<group>";
+		};
+		853518B11749D10100F589EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				853518E21749D12C00F589EE /* LAMessageUIDemo-Prefix.pch */,
+				853518E11749D12C00F589EE /* LAMessageUIDemo-Info.plist */,
+				853518E31749D12C00F589EE /* main.m */,
+				853518EC1749D15200F589EE /* InfoPlist.strings */,
+				853518E81749D15200F589EE /* Default-568h@2x.png */,
+				853518E91749D15200F589EE /* Default.png */,
+				853518EA1749D15200F589EE /* Default@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853518CE1749D10200F589EE /* LAMessageUIDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				853518D41749D10200F589EE /* LAMessageUIDemoTests.h */,
+				853518D51749D10200F589EE /* LAMessageUIDemoTests.m */,
+				853518CF1749D10200F589EE /* Supporting Files */,
+			);
+			path = LAMessageUIDemoTests;
+			sourceTree = "<group>";
+		};
+		853518CF1749D10200F589EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				853518D01749D10200F589EE /* LAMessageUIDemoTests-Info.plist */,
+				853518D11749D10200F589EE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853518F21749D17D00F589EE /* LAMessageUI */ = {
+			isa = PBXGroup;
+			children = (
+				853518F31749D17D00F589EE /* LAMessageComposeRootViewController.h */,
+				853518F41749D17D00F589EE /* LAMessageComposeRootViewController.m */,
+				853518F51749D17D00F589EE /* LAMessageComposeViewController.h */,
+				853518F61749D17D00F589EE /* LAMessageComposeViewController.m */,
+				853518F71749D17D00F589EE /* LAMessageComposeViewControllerDelegate.h */,
+				853518F81749D17D00F589EE /* LAMessageItem.h */,
+				853518F91749D17D00F589EE /* LAMessageUI.h */,
+			);
+			path = LAMessageUI;
+			sourceTree = "<group>";
+		};
 		85B70C501746D4AF00981DB6 = {
 			isa = PBXGroup;
 			children = (
+				853518F21749D17D00F589EE /* LAMessageUI */,
+				853518B01749D10100F589EE /* LAMessageUIDemo */,
+				853518CE1749D10200F589EE /* LAMessageUIDemoTests */,
+				853518A91749D10100F589EE /* Frameworks */,
+				853518A81749D10100F589EE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		853518A61749D10100F589EE /* LAMessageUIDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 853518DB1749D10200F589EE /* Build configuration list for PBXNativeTarget "LAMessageUIDemo" */;
+			buildPhases = (
+				853518A31749D10100F589EE /* Sources */,
+				853518A41749D10100F589EE /* Frameworks */,
+				853518A51749D10100F589EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LAMessageUIDemo;
+			productName = LAMessageUIDemo;
+			productReference = 853518A71749D10100F589EE /* LAMessageUIDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		853518C61749D10100F589EE /* LAMessageUIDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 853518DC1749D10200F589EE /* Build configuration list for PBXNativeTarget "LAMessageUIDemoTests" */;
+			buildPhases = (
+				853518C21749D10100F589EE /* Sources */,
+				853518C31749D10100F589EE /* Frameworks */,
+				853518C41749D10100F589EE /* Resources */,
+				853518C51749D10100F589EE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				853518CD1749D10200F589EE /* PBXTargetDependency */,
+			);
+			name = LAMessageUIDemoTests;
+			productName = LAMessageUIDemoTests;
+			productReference = 853518C71749D10100F589EE /* LAMessageUIDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		85B70C511746D4AF00981DB6 /* Project object */ = {
@@ -29,14 +237,258 @@
 				en,
 			);
 			mainGroup = 85B70C501746D4AF00981DB6;
+			productRefGroup = 853518A81749D10100F589EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				853518A61749D10100F589EE /* LAMessageUIDemo */,
+				853518C61749D10100F589EE /* LAMessageUIDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		853518A51749D10100F589EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518E61749D12C00F589EE /* LAMessageUIDemo-Info.plist in Resources */,
+				853518EE1749D15200F589EE /* Default-568h@2x.png in Resources */,
+				853518EF1749D15200F589EE /* Default.png in Resources */,
+				853518F01749D15200F589EE /* Default@2x.png in Resources */,
+				853518F11749D15200F589EE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853518C41749D10100F589EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518D31749D10200F589EE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		853518C51749D10100F589EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		853518A31749D10100F589EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518E41749D12C00F589EE /* LAMAppDelegate.m in Sources */,
+				853518E51749D12C00F589EE /* LAMDemoViewController.m in Sources */,
+				853518E71749D12C00F589EE /* main.m in Sources */,
+				853518FA1749D17D00F589EE /* LAMessageComposeRootViewController.m in Sources */,
+				853518FB1749D17D00F589EE /* LAMessageComposeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853518C21749D10100F589EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853518D61749D10200F589EE /* LAMessageUIDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		853518CD1749D10200F589EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 853518A61749D10100F589EE /* LAMessageUIDemo */;
+			targetProxy = 853518CC1749D10200F589EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		853518D11749D10200F589EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853518D21749D10200F589EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		853518EC1749D15200F589EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853518ED1749D15200F589EE /* en */,
+			);
+			name = InfoPlist.strings;
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		853518D71749D10200F589EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LAMessageUIDemo/LAMessageUIDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "LAMessageUIDemo/LAMessageUIDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		853518D81749D10200F589EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LAMessageUIDemo/LAMessageUIDemo-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "LAMessageUIDemo/LAMessageUIDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		853518D91749D10200F589EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LAMessageUIDemo.app/LAMessageUIDemo";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LAMessageUIDemo/LAMessageUIDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "LAMessageUIDemoTests/LAMessageUIDemoTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		853518DA1749D10200F589EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LAMessageUIDemo.app/LAMessageUIDemo";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LAMessageUIDemo/LAMessageUIDemo-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "LAMessageUIDemoTests/LAMessageUIDemoTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		85B70C551746D4AF00981DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -52,6 +504,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		853518DB1749D10200F589EE /* Build configuration list for PBXNativeTarget "LAMessageUIDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853518D71749D10200F589EE /* Debug */,
+				853518D81749D10200F589EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		853518DC1749D10200F589EE /* Build configuration list for PBXNativeTarget "LAMessageUIDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853518D91749D10200F589EE /* Debug */,
+				853518DA1749D10200F589EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		85B70C541746D4AF00981DB6 /* Build configuration list for PBXProject "LAMessageUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
