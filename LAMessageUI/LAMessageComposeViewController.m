@@ -8,6 +8,8 @@
 
 #import "LAMessageComposeViewController.h"
 #import "LAMessageComposeRootViewController.h"
+#import "APTokenField.h"
+#import "LAMessageComposeView.h"
 
 @interface LAMessageComposeViewController ()
 
@@ -17,10 +19,33 @@
 
 @implementation LAMessageComposeViewController
 
+- (UIModalPresentationStyle)modalPresentationStyle {
+  UIUserInterfaceIdiom idiom = [[UIDevice currentDevice] userInterfaceIdiom];
+  if(idiom == UIUserInterfaceIdiomPad)
+    return UIModalPresentationFormSheet;
+  return UIModalPresentationCurrentContext;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.rootViewController = [[LAMessageComposeRootViewController alloc] init];
+  self.rootViewController = [[LAMessageComposeRootViewController alloc] initWithMessageComposeController:self];
   [self setViewControllers:@[self.rootViewController]];
+}
+
+- (void)setBody:(NSString *)body {
+//  self.rootViewController.composeView.textView.text = body;
+}
+
+- (void)setRecipments:(NSMutableArray *)recipments {
+//  self.rootViewController.composeView.recipientField.tokens = recipments;
+}
+
+- (NSString *)body {
+  return self.rootViewController.composeView.textView.text;
+}
+
+- (NSMutableArray *)recipments {
+  return self.rootViewController.composeView.recipientField.tokens;
 }
 
 @end

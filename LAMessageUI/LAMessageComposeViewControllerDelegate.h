@@ -15,9 +15,10 @@
 
 @optional
 
-- (id<LAMessageItem>)messageComposeController:(LAMessageComposeViewController *)messageComposeController
-                    willCreateNewItemWithText:(NSString *)text;
+- (BOOL)messageComposeControllerWillFinishComposingMessage:(LAMessageComposeViewController *)messageComposeController
+                                                withSender:(id)sender;
 
-- (BOOL)messageComposeControllerWillFinishComposingMessage:(LAMessageComposeViewController *)messageComposeController;
+- (BOOL)messageComposeControllerWillCancelComposingMessage:(LAMessageComposeViewController *)messageComposeController
+                                                withSender:(id)sender;
 
 @end

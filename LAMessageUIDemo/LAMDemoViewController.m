@@ -7,9 +7,14 @@
 //
 
 #import "LAMDemoViewController.h"
-#import "LAMessageUI.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface LAMDemoViewController ()
+
+@property (nonatomic, assign) BOOL confirmLocked;
+@property (nonatomic, strong) LAMessageComposeViewController *composeViewController;
+@property (nonatomic, copy) NSMutableArray *draftRecipients;
+@property (nonatomic, copy) NSString *draftBody;
 
 @end
 
@@ -28,8 +33,64 @@
 }
 
 - (void)openModal:(id)sender {
-  LAMessageComposeViewController *vc = [[LAMessageComposeViewController alloc] init];
-  [self presentViewController:vc animated:YES completion:NULL];
+  self.composeViewController = [[LAMessageComposeViewController alloc] init];
+  [self presentViewController:self.composeViewController animated:YES completion:NULL];
+  self.composeViewController.messageComposeDelegate = self;
+  self.composeViewController.recipments = self.draftRecipients;
+  self.composeViewController.body = self.draftBody;
+  self.draftRecipients = nil;
+  self.draftBody = nil;
 }
+
+- (BOOL)messageComposeControllerWillCancelComposingMessage:(LAMessageComposeViewController *)messageComposeController
+                                                withSender:(id)sender {
+  if(self.confirmLocked)
+    return NO;
+  self.confirmLocked = YES;
+  UIActionSheet *as =
+  [[UIActionSheet alloc]
+   initWithTitle:nil
+   delegate:self
+   cancelButtonTitle:nil
+   destructiveButtonTitle:NSLocalizedString(@"Discard Draft", nil)
+   otherButtonTitles:NSLocalizedString(@"Save Draft", nil),
+   nil];
+  if([sender isKindOfClass:[UIBarButtonItem class]])
+    [as showFromBarButtonItem:sender animated:YES];
+  else
+    [as showInView:self.view];
+  return NO;
+}
+
+- (BOOL)messageComposeControllerWillFinishComposingMessage:(LAMessageComposeViewController *)messageComposeController
+                                                withSender:(id)sender  {
+  [SVProgressHUD showWithStatus:@"Sending" maskType:SVProgressHUDMaskTypeGradient];
+  double delayInSeconds = 2.0;
+  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    [SVProgressHUD showSuccessWithStatus:@"Sent!"];
+    [self.composeViewController dismissViewControllerAnimated:YES completion:NULL];
+    self.composeViewController = nil;
+  });
+  return NO;
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+  self.confirmLocked = NO;
+  if(buttonIndex == 1) {
+    self.draftRecipients = self.composeViewController.recipments;
+    self.draftBody = self.composeViewController.body;
+  } else {
+    self.draftRecipients = nil;
+    self.draftBody = nil;
+  }
+  if(buttonIndex >= 0) {
+    [self.composeViewController dismissViewControllerAnimated:YES completion:NULL];
+    self.composeViewController = nil;
+  }
+}
+
 
 @end

@@ -9,17 +9,17 @@
 #import "LAMessageComposeRootViewController.h"
 #import "LAMessageComposeViewController.h"
 #import "LAMessageComposeViewControllerDelegate.h"
+#import "LAMessageComposeView.h"
+#import "APTokenField.h"
+#import "APTokenView.h"
 
 @interface LAMessageComposeRootViewController ()
 
-@property (nonatomic, strong) UIBarButtonItem *doneButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *cancelButtonItem;
 @property (nonatomic, unsafe_unretained) LAMessageComposeViewController *messageComposeController;
 
 @end
 
 @implementation LAMessageComposeRootViewController
-
 
 - (id)initWithMessageComposeController:(LAMessageComposeViewController *)messageComposeController {
   if(self = [self initWithNibName:nil bundle:nil]) {
@@ -32,6 +32,7 @@
   if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
     self.doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
     self.cancelButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    self.title = NSLocalizedString(@"New Message", nil);
 
   }
   return self;
@@ -41,23 +42,56 @@
   [super viewWillAppear:animated];
   [self.navigationItem setLeftBarButtonItem:self.cancelButtonItem animated:animated];
   [self.navigationItem setRightBarButtonItem:self.doneButtonItem animated:animated];
+  [self.composeView setNeedsLayout];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  self.view.backgroundColor = [UIColor whiteColor];
-  self.title = NSLocalizedString(@"New Message", nil);
+- (void)loadView {
+  [super loadView];
+  if(nil == self.composeView)
+    self.composeView = [[LAMessageComposeView alloc] init];
+  self.view = self.composeView;
+  self.composeView.tokenFieldDelegate = self;
+  self.composeView.tokenFieldDataSource = self.recipientFieldDataSource;
 }
+
 
 - (void)done:(id)sender {
-  if(![self.messageComposeController.messageComposeDelegate respondsToSelector:@selector(messageComposeControllerWillFinishComposingMessage:)] ||
-     [self.messageComposeController.messageComposeDelegate messageComposeControllerWillFinishComposingMessage:self.messageComposeController]) {
+  if(![self.messageComposeController.messageComposeDelegate respondsToSelector:@selector(messageComposeControllerWillFinishComposingMessage:withSender:)] ||
+     [self.messageComposeController.messageComposeDelegate messageComposeControllerWillFinishComposingMessage:self.messageComposeController withSender:sender]) {
     [self dismissViewControllerAnimated:YES completion:NULL];
   }
 }
 
 - (void)cancel:(id)sender {
-  [self dismissViewControllerAnimated:YES completion:NULL];
+  if(![self.messageComposeController.messageComposeDelegate respondsToSelector:@selector(messageComposeControllerWillCancelComposingMessage:withSender:)] ||
+     [self.messageComposeController.messageComposeDelegate messageComposeControllerWillCancelComposingMessage:self.messageComposeController withSender:sender]) {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+  }
+}
+
+- (void)createNewObjectAndTokenWithTitle:(NSString *)title {
+  id newObject = title;
+  APTokenView *newToken = [APTokenView tokenWithTitle:title object:newObject colors:nil];
+  [self.composeView.recipientField addToken:newToken];
+}
+
+#pragma mark - APTokenFieldDelegate
+
+- (void)tokenField:(APTokenField *)tokenField didAddToken:(APTokenView *)token {
+  [self.composeView setNeedsLayout];
+}
+
+- (BOOL)tokenField:(APTokenField *)tokenField shouldAddToken:(APTokenView *)token {
+  return token.title.length > 0;
+}
+
+- (BOOL)tokenField:(APTokenField *)tokenField shouldRemoveToken:(APTokenView *)token {
+  return YES;
+}
+
+- (void)tokenFieldDidReturn:(APTokenField *)tokenField {
+  if(tokenField.text && tokenField.text.length > 0)
+    [self createNewObjectAndTokenWithTitle:tokenField.text];
 }
 
 @end

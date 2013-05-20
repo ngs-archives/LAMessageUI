@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LAMessageUI.h"
 
-@interface LAMDemoViewController : UIViewController
+@interface LAMDemoViewController : UIViewController<LAMessageComposeViewControllerDelegate, UIActionSheetDelegate>
 
 @end

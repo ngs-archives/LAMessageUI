@@ -9,4 +9,3 @@
 #import <Foundation/Foundation.h>
 #import "LAMessageComposeViewControllerDelegate.h"
 #import "LAMessageComposeViewController.h"
-#import "LAMessageItem.h"
