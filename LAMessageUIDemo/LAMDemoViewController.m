@@ -13,7 +13,7 @@
 
 @property (nonatomic, assign) BOOL confirmLocked;
 @property (nonatomic, strong) LAMessageComposeViewController *composeViewController;
-@property (nonatomic, copy) NSMutableArray *draftRecipients;
+@property (nonatomic, copy) NSArray *draftRecipients;
 @property (nonatomic, copy) NSString *draftBody;
 
 @end
@@ -41,6 +41,8 @@
   self.draftRecipients = nil;
   self.draftBody = nil;
 }
+
+#pragma mark - LAMessageComposeViewControllerDelegate
 
 - (BOOL)messageComposeControllerWillCancelComposingMessage:(LAMessageComposeViewController *)messageComposeController
                                                 withSender:(id)sender {

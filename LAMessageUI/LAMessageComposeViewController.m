@@ -33,19 +33,21 @@
 }
 
 - (void)setBody:(NSString *)body {
-//  self.rootViewController.composeView.textView.text = body;
+  self.rootViewController.composeView.textView.text = body;
 }
 
-- (void)setRecipments:(NSMutableArray *)recipments {
-//  self.rootViewController.composeView.recipientField.tokens = recipments;
+- (void)setRecipments:(NSArray *)recipments {
+  if(!recipments)
+    recipments = @[];
+  self.rootViewController.composeView.recipientField.tokens = recipments.mutableCopy;
 }
 
 - (NSString *)body {
   return self.rootViewController.composeView.textView.text;
 }
 
-- (NSMutableArray *)recipments {
-  return self.rootViewController.composeView.recipientField.tokens;
+- (NSArray *)recipments {
+  return self.rootViewController.composeView.recipientField.tokens.copy;
 }
 
 @end

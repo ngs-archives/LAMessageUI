@@ -29,6 +29,9 @@
 		856B365C1749D9D000E326AA /* APShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B36551749D9CF00E326AA /* APShadowView.m */; };
 		856B365D1749D9D000E326AA /* APTokenField.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B36571749D9CF00E326AA /* APTokenField.m */; };
 		856B365E1749D9D000E326AA /* APTokenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B365B1749D9CF00E326AA /* APTokenView.m */; };
+		856B3668174A610800E326AA /* AmericanStatesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B3667174A610800E326AA /* AmericanStatesDataSource.m */; };
+		856B366C174A659D00E326AA /* LAMessageMailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B366B174A659D00E326AA /* LAMessageMailItem.m */; };
+		856B366F174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 856B366E174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.m */; };
 		ADA5A5F6506B452BA544ED5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8534F88B864A8395CD3C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,13 @@
 		856B36591749D9CF00E326AA /* APTokenFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTokenFieldDelegate.h; sourceTree = "<group>"; };
 		856B365A1749D9CF00E326AA /* APTokenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTokenView.h; sourceTree = "<group>"; };
 		856B365B1749D9CF00E326AA /* APTokenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APTokenView.m; sourceTree = "<group>"; };
+		856B3666174A610800E326AA /* AmericanStatesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmericanStatesDataSource.h; path = ../../APTokenField/APTokenField/AmericanStatesDataSource.h; sourceTree = "<group>"; };
+		856B3667174A610800E326AA /* AmericanStatesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AmericanStatesDataSource.m; path = ../../APTokenField/APTokenField/AmericanStatesDataSource.m; sourceTree = "<group>"; };
+		856B3669174A63ED00E326AA /* LAMessageRecipmentItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAMessageRecipmentItem.h; sourceTree = "<group>"; };
+		856B366A174A659D00E326AA /* LAMessageMailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageMailItem.h; sourceTree = "<group>"; };
+		856B366B174A659D00E326AA /* LAMessageMailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMessageMailItem.m; sourceTree = "<group>"; };
+		856B366D174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMessageAddressBookTokenDataSource.h; sourceTree = "<group>"; };
+		856B366E174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMessageAddressBookTokenDataSource.m; sourceTree = "<group>"; };
 		EB4F08746B304071A8CD6F01 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -136,6 +146,8 @@
 		853518B01749D10100F589EE /* LAMessageUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				856B3666174A610800E326AA /* AmericanStatesDataSource.h */,
+				856B3667174A610800E326AA /* AmericanStatesDataSource.m */,
 				853518DD1749D12C00F589EE /* LAMAppDelegate.h */,
 				853518DE1749D12C00F589EE /* LAMAppDelegate.m */,
 				853518DF1749D12C00F589EE /* LAMDemoViewController.h */,
@@ -190,6 +202,11 @@
 				853518F91749D17D00F589EE /* LAMessageUI.h */,
 				856B36431749D45F00E326AA /* LAMessageComposeView.h */,
 				856B36441749D45F00E326AA /* LAMessageComposeView.m */,
+				856B3669174A63ED00E326AA /* LAMessageRecipmentItem.h */,
+				856B366A174A659D00E326AA /* LAMessageMailItem.h */,
+				856B366B174A659D00E326AA /* LAMessageMailItem.m */,
+				856B366D174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.h */,
+				856B366E174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.m */,
 			);
 			path = LAMessageUI;
 			sourceTree = "<group>";
@@ -368,6 +385,9 @@
 				856B365C1749D9D000E326AA /* APShadowView.m in Sources */,
 				856B365D1749D9D000E326AA /* APTokenField.m in Sources */,
 				856B365E1749D9D000E326AA /* APTokenView.m in Sources */,
+				856B3668174A610800E326AA /* AmericanStatesDataSource.m in Sources */,
+				856B366C174A659D00E326AA /* LAMessageMailItem.m in Sources */,
+				856B366F174A9A1C00E326AA /* LAMessageAddressBookTokenDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
